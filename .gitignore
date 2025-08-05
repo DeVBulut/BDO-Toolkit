@@ -1,0 +1,54 @@
+# Build results
+bin/
+obj/
+*.log
+
+# VS generated folders
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Auto-generated files
+Generated\ Files/
+
+# Local test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# DotCover
+.idea/.idea.DotSettings
+.idea/.idea.DotSettings.user
+*.dotCover
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+
+# Temporary
+*.tmp
+*.temp
+*.bak
+*.dbmdl
+*.svclog
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Publish output
+*.publish/
+*.PublishProfiles/
