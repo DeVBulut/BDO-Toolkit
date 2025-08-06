@@ -19,7 +19,7 @@
         <Grid>
             <StackPanel Orientation="Vertical" VerticalAlignment="Top">
 
-                <TextBlock Text=" 💎 BDO Grind Tracker 💎"
+                <TextBlock Text="BDO Grind Tracker"
                            FontSize="21" FontWeight="Bold"
                            Foreground="White"
                            Margin="0,8,0,10"
@@ -33,12 +33,12 @@
                            HorizontalAlignment="Center"/>   
 
                 <TextBlock Text="📦 Trash Loot: 1228"
-                           FontSize="16"
+                           FontSize="14"
                            Foreground="#FFD600"
                            Margin="15,0,0,10"/>
 
                 <TextBlock Text="💎 Rare Drops: 3"
-                           FontSize="16"
+                           FontSize="14"
                            Foreground="#7C4DFF"
                            Margin="15,0,0,200"/>
 
@@ -48,9 +48,102 @@
                     <Button Content="End" Width="80" Margin="5" Click="End_Click"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <CheckBox Content="Always On Top" Margin="10,0,0,0" Foreground="White"/>
-                    <CheckBox Content="Minimize to Tray" Margin="10,0,0,0" Foreground="White"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,25,0,0">
+                    <CheckBox Content="Always On Top" HorizontalAlignment="Left" Margin="0,0,10,0">
+                        <CheckBox.Style>
+                            <Style TargetType="CheckBox">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="CheckBox">
+                                            <StackPanel Orientation="Horizontal">
+                                                <!-- Rounded box -->
+                                                <Border x:Name="CheckBoxBorder"
+                                                        Width="16" Height="16"
+                                                        CornerRadius="4"
+                                                        Background="Transparent"
+                                                        BorderBrush="#FF8040"
+                                                        BorderThickness="2"
+                                                        Margin="0,0,8,0"
+                                                        VerticalAlignment="Center">
+                                                      <!-- Checkmark -->
+                                                      <Path x:Name="CheckMark"
+                                                            Data="M0,4 L2,6 6,0"
+                                                            Stroke="White"
+                                                            StrokeThickness="2"
+                                                            Visibility="Collapsed"
+                                                            HorizontalAlignment="Center"
+                                                            VerticalAlignment="Center"
+                                                      />
+                                                </Border>
+
+                                                <!-- Label text -->
+                                                <ContentPresenter VerticalAlignment="Center"/>
+                                            </StackPanel>
+
+                                            <!-- Logic -->
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                                                    <Setter TargetName="CheckBoxBorder" Property="Background" Value="#FF512BD4"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </CheckBox.Style>
+                    </CheckBox>
+
+                    <CheckBox Content="Always On Top" Height="24">
+                        <CheckBox.Style>
+                            <Style TargetType="CheckBox">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="FontSize" Value="14"/>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="CheckBox">
+                                            <StackPanel Orientation="Horizontal">
+                                                <!-- Rounded box -->
+                                                <Border x:Name="CheckBoxBorder"
+                                                        Width="16" Height="16"
+                                                        CornerRadius="4"
+                                                        Background="Transparent"
+                                                        BorderBrush="#FF512BD4"
+                                                        BorderThickness="2"
+                                                        Margin="0,0,8,0"
+                                                        VerticalAlignment="Center">
+                                                    <!-- Checkmark -->
+                                                    <Path x:Name="CheckMark"
+                                                          Data="M0,4 L2,6 6,0"
+                                                          Stroke="White"
+                                                          StrokeThickness="2"
+                                                          Visibility="Collapsed"
+                                                          HorizontalAlignment="Center"
+                                                          VerticalAlignment="Center"/>
+                                                </Border>
+
+                                                <!-- Label text -->
+                                                <ContentPresenter VerticalAlignment="Center"/>
+                                            </StackPanel>
+
+                                            <!-- Logic -->
+                                            <ControlTemplate.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter TargetName="CheckMark" Property="Visibility" Value="Visible"/>
+                                                    <Setter TargetName="CheckBoxBorder" Property="Background" Value="#FF512BD4"/>
+                                                </Trigger>
+                                            </ControlTemplate.Triggers>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </CheckBox.Style>
+                    </CheckBox>
+
+
+
                 </StackPanel>
 
             </StackPanel>
