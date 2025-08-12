@@ -42,7 +42,7 @@
                                 Background="#222327"
                                 BorderThickness="0"
                                 HorizontalAlignment="Stretch"
-                                VerticalAlignment="Stretch">
+                                VerticalAlignment="Stretch" Click="Button_Click">
 
                                 <TextBlock Text="Grind Tracker"
                                            FontSize="18"

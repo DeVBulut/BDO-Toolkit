@@ -23,6 +23,7 @@ public partial class MainWindow : Window
 
     public MainWindow()
     {
+        InitializeComponent();
         _timer = new DispatcherTimer();
         _timer.Interval = TimeSpan.FromSeconds(1);
         _timer.Tick += Timer_Tick;

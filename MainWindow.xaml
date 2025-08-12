@@ -10,7 +10,7 @@
         MouseDown="Window_MouseDown"
         >
 
-    <Border BorderThickness="2"
+    <Border BorderThickness="3"
             BorderBrush="#e67e22"
             CornerRadius="12"
             Background="#1e1e1e"
